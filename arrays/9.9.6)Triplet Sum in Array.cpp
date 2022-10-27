@@ -19,7 +19,7 @@ Output:
 Explanation:
 The triplet {1, 3, 6} in 
 the array sums up to 10.
-  solution 1:- Bruteforce
+  solution 1:- time=O(n2) and space=O(n)
      int ans=0;
 for(int i=0;i<n-2;i++)
 {
@@ -35,7 +35,7 @@ for(int i=0;i<n-2;i++)
 }
 return ans;
 
-solution 2:-
+solution 2:- time=O(n2) and space=O(1)
    sort(a,a+n);
    int ans=0;
 for(int i=0;i<n-2;i++){
@@ -55,5 +55,5 @@ for(int i=0;i<n-2;i++){
     }
 }
 
-solution 3:- Bruteforce
+solution 3:- Bruteforce O(n3)
   
