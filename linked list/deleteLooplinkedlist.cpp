@@ -60,7 +60,7 @@ method 2:- using slow and fast pointer time O(N) and space O(N)
      }
        else if (slow==head)
       {
-         while(fast->next!=low)
+         while(fast->next!=slow)
          {
           fast=fast->next;
          }
