@@ -31,9 +31,9 @@ method 2:- using slow and fast pointer time O(N) and space O(N)
   step 2: detect the loop in the linkedlist
            low=low->next
            fast=fast->next->next
-   step 3: if loop detected the two case is generated 1. last node pointing to other than head
-                                                      2. last node is pointing to directly to head
-   step 4 : remove last node (which is forming the loop) slow=head
+   step 3: if loop detected the two case is generated 1. last node pointing to directly head
+                                                      2. last node pointing to other than head node
+   step 4 : remove last node (which is forming the loop) slow=head(first must check)
                and assign to NULL to the fast next
   void deleteLoop(node *head)
      {
@@ -48,17 +48,15 @@ method 2:- using slow and fast pointer time O(N) and space O(N)
               break;
          }
   //two case is generated
-    if(slow==fast)
+     if (slow==head)
       {
-         slow=head;
-         while(slow->next!=fast->next)
+         while(fast->next!=slow)
          {
-           slow=slow->next;
-           fast=fast->next;
+          fast=fast->next;
          }
-        fast->next=NULL;
-     }
-       else if (slow==head)
+         fast->next=NULL:
+      }
+      else if (slow==head)
       {
          while(fast->next!=slow)
          {
