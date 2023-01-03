@@ -31,26 +31,21 @@ method 2 :- using slow and fast pointer O(n) and space =O(1)
   step 3:-  //if we reach here it means both the pointers fast and slow point to 
            //same node which shows the presence of loop so we return true.
      
-bool detectLoop(Node* head)
-    {
-        if(!head) return false;
-        
-     
-        Node* fast = head->next;
-        Node* slow = head;
-        
-        while( fast != slow)
+         bool detectLoop(Node* head)
+           {
+        // your code here
+        Node *slow=head;
+        Node *fast=head;
+        while(fast!=NULL and fast->next!=NULL and slow!=NULL)
         {
-            //if the node pointed by first pointer(fast) or the node 
-            //next to it is null, we return false.
-            if( !fast || !fast->next ) 
-            return false;
-            
-            fast=fast->next->next;
             slow=slow->next;
+            fast=fast->next->next;
+            if(slow==fast)
+            {
+                return true;
+            }
         }
-        //if we reach here it means both the pointers fast and slow point to 
-        //same node which shows the presence of loop so we return true.
-        return true;
-    }
+        return false;
+      }
+    
     
