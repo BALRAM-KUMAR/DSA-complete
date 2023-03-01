@@ -36,7 +36,7 @@ method 2 :- using slow and fast pointer O(n) and space =O(1)
         // your code here
         Node *slow=head;
         Node *fast=head;
-        while(fast!=NULL and fast->next!=NULL and slow!=NULL)
+        while(fast!=NULL and fast->next!=NULL and slow!=NULL)  // while(fast and fast->next and slow) if three of exist then go in loop
         {
             slow=slow->next;
             fast=fast->next->next;
