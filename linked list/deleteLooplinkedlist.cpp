@@ -56,10 +56,12 @@ method 2:- using slow and fast pointer time O(N) and space O(N)
          }
          fast->next=NULL:
       }
-      else if (slow==head)
+      else if (slow==fast)
       {
-         while(fast->next!=slow)
+         slow=head;
+         while(slow->next!=fast->next)
          {
+          slow=slow->next;
           fast=fast->next;
          }
          fast->next=NULL:
