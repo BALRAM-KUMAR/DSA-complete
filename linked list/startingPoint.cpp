@@ -20,7 +20,7 @@ Time O(n) and spaceO(1)
                   }
               }
        if(slow!=fast) return NULL;
-           low=head; //searching from starting
+           slow=head; //searching from starting
            while(slow!=fast)
            {
              slow=slow->next;
