@@ -3,7 +3,7 @@ Approach :-
   step 1:- reverse the given linkedlist
   step 2:- we take of three condition when head is not NULL
     con 1:- if last node of given linked list 9 (459 reversed 954 perford operation 
-    con 2:- if (node->data==9) then make node->data=0
+    con 2:- if All (node->data==9) then make node->data=0
     con 3:- else curr->data=curr->data+1; now break 
    step 3:- now again reverse the linked list
    
