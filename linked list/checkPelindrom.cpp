@@ -18,6 +18,10 @@ approach 2:-
          return 0
        else
          return 1
+	   
+	       
+	       
+time = O(N) space=O(N)
          
 Node* reverse(struct Node* head)
 	{
