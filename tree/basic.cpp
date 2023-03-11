@@ -10,6 +10,12 @@ class TreeNode{
     TreeNode(T data){
         this->data=data;
     }
+    //destructor
+    ~TreeNode(){
+        for(int i=0;i<root->children.size();i++)
+        {
+            delete children[i];
+        }
 };
 
 
@@ -77,5 +83,5 @@ int main(){
    cout<<endl;
    cout<<"root"<<" "<<"children"<<endl;
    printTreeBetter(root);
-   
+   delete root;
 }
