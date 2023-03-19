@@ -1,6 +1,6 @@
 concept:- A tree is height balanced if difference between heights of left 
            and right subtrees is not more than one for all nodes of tree.
-           
+Application of height           
 example:- Input:
        10                                                   
      /   \
