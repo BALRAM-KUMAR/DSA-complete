@@ -3,7 +3,7 @@ Recusive approach:- using inorder preorder and postorder
 In rec appproach code is sorter and interviewer want sorter code always 
   Tc=O(n) and sc=O(H) i am not considering the data str vector for analysing space complexity
   so space complexity is hight of the tree
-Approach is based on preorder traversal (Root left and right)
+Approach is based on  preorder traversal (Root left and right)
 void func(Node* root,int level ,vector<int> &ans){
         if(root==NULL){
             return;
