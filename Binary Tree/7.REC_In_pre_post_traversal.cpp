@@ -1,3 +1,6 @@
+TC = o(n)
+SC = O(N)
+
 approach: inorder
 
 class Solution {
