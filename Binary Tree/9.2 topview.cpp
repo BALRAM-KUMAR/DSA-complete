@@ -3,7 +3,9 @@ Approach:-
 
 can we solve this problem using recusion ans is no bcs
 
-
+concept used :- vertical line traversal
+Ds used :- queue storing initial node and line and 
+           another is map line and node (map store sorted fashion of key)
 
 class Solution
 {
