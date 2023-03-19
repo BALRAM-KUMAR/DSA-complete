@@ -1,3 +1,7 @@
+approach :- 
+  TC=O(N)
+  SC=O(Hight of the tree)
+  
 class Solution {
   public:
     // Function to convert a binary tree into its mirror tree.
