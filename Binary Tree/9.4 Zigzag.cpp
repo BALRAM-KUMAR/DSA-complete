@@ -1,5 +1,17 @@
 code library
+Application of level order traversal
 
+
+Example:
+       7
+     9    7
+   8  5  6
+ 10 2
+ 
+ level 1 store : 7      size 1
+ level 2 store  : 9 7    size 2
+ level 3 store  : 8 5 6  size 3
+ level 4 store  : 10 2    size 2
 class Solution{
     public:
     //Function to store the zig zag order traversal of tree in a list.
