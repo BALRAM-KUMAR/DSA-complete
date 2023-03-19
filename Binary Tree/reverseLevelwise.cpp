@@ -1,3 +1,7 @@
+Approach :- 
+ 
+sc=tc=O(N)
+
 vector<int> reverseLevelOrder(Node *root)
 {
      vector<int> output;
