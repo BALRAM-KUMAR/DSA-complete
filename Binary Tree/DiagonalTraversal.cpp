@@ -1,3 +1,20 @@
+Input :
+            8
+         /     \
+        3      10
+      /   \      \
+     1     6     14
+         /   \   /
+        4     7 13
+Output : 8 10 14 3 6 7 13 1 4
+
+
+Basic idea : right jate jao aur print krte jao jb tkk NULL nhi milta
+Expected Time Complexity: O(N).
+Expected Auxiliary Space: O(N).
+Here N is number of nodes.
+
+
 vector<int> diagonal(Node *root)
 {
    vector<int> ans;
