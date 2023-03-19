@@ -1,5 +1,7 @@
-template <typename T>
 
+Approach:- 
+  tc=o(n)=sc if we are not consider the other ds vector
+template <typename T>
 class BinaryTreeNode
 {
     public:
