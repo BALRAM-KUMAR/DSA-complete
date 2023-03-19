@@ -1,5 +1,6 @@
 
-Recusive approach:-
+Recusive approach:- using inorder preorder and postorder
+In rec appproach code is sorter and interviewer want sorter code always 
   Tc=O(n) and sc=O(H) i am not considering the data str vector for analysing space complexity
   so space complexity is hight of the tree
 
