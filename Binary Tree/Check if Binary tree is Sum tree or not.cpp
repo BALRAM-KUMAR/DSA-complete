@@ -18,3 +18,27 @@ class Solution
         return f;
     }
 };
+
+
+Example:- 
+Input:
+             10
+          /      \
+        -2        6
+       /   \     /  \
+     8     -4   7    5
+
+Output:
+            20
+          /    \
+        4        12
+       /  \     /  \
+     0     0   0    0
+
+Explanation:
+
+           (4-2+12+6)
+          /           \
+      (8-4)          (7+5)
+       /   \         /  \
+      0     0       0    0
