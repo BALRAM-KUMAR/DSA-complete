@@ -1,0 +1,22 @@
+ int minElement(Node *root){
+        int mine=root->data;
+        while(root->left != NULL){
+            mine = root->left->data;
+            root=root->left;
+            
+        }
+        return mine;
+    }
+Node *deleteNode(Node *root, int key) {
+    // your code goes here
+    if(root == NULL) return NULL;
+        if(key < root->data) root->left = deleteNode(root->left,key);
+        else if(key>root->data) root->right = deleteNode(root->right,key);
+        else{
+            if(root->left == NULL) return root->right;
+            else if(root->right == NULL) return root->left;
+            root->data = minElement(root->right);
+            root->right = deleteNode(root->right,root->data);
+        }
+       return root; 
+    }
