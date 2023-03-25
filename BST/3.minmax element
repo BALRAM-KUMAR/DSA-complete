@@ -1,0 +1,9 @@
+if(root==NULL){
+        return -1;
+    }
+    int mine=root->data;
+    while(root->left!=NULL){
+        mine=min(mine,root->left->data);
+        root=root->left;
+    }
+    return mine;
