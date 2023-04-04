@@ -7,7 +7,7 @@ Input: Array = [1,2,6,4,5] , k = 3
 Output : kth largest element = 4,  kth smallest element = 4
 
 Solution 1: Sorting the Array(First approach(A simple approach)
-The most naive approach is to sort the given array in descending order.
+The most naive approach is to sort the given array in increasing order.
 The index of kth Largest element = k-1 ( zero-based indexing ) 
 The index of kth Smallest element = n-k 
 The array can also be sorted in ascending order.
