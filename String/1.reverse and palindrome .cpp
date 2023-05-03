@@ -6,6 +6,7 @@ string reverseWord(string str){
     return str;
 }
 
+//reverse(str.begin(), str.end());
 
 palindrome
 	
@@ -19,3 +20,5 @@ palindrome
 	    }
 	    return 1;
 	}
+
+
