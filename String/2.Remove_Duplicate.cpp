@@ -13,3 +13,16 @@ string removeDuplicates(string str) {
         }
         return str;
 	}
+
+
+Approach:2
+	string removeDuplicates(string str) {
+	    vector<int> hash(256, 0);
+	    string ans;
+	    for (char c : str) {
+	        if (hash[c] == 0) {
+	            ans.push_back(c);
+	            hash[c]++;
+	        }
+	    }
+	    return ans;
