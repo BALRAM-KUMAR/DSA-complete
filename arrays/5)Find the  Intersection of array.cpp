@@ -61,7 +61,33 @@ Expected Auxiliary Space: O(min(n,m))
   
  Solution 3: 2 Pointer approach
    
-    
+    // #3 Method to find the intersection elements from two given arrays - O(NLogN + MLogM) & O(1)
+vector<int> intersection(vector<int>& nums1, vector<int>& nums2) { 
+    vector<int> ans;
+
+    sort(begin(nums1), end(nums1));
+    sort(begin(nums2), end(nums2));
+
+    int i = 0, j = 0;
+
+    while(i < nums1.size() && j < nums2.size()) {
+        if(nums1[i] < nums2[j]) {
+            i++;
+        }
+        else if(nums1[i] > nums2[j]) {
+            j++;
+        }
+        else {
+            ans.push_back(nums1[i]);
+            int tmpInd1 = i; int tmpInd2 = j; // Requires to skip the correct duplicates correctly
+            // Skip the duplicates if present
+            while(i < nums1.size() && nums1[tmpInd1] == nums1[i]) i++;
+            while(j < nums2.size() && nums2[tmpInd2] == nums2[j]) j++;
+        }
+    }
+
+    return ans;
+}
     
     
     
