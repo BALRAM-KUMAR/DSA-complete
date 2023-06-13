@@ -29,6 +29,8 @@ so on... Modified array is :
     	long long max=arr[n-1]+1;
     	for(int i=0;i<n;i++){
     	    if(i%2==0){
+		    //For the purpose of using modulo operator is
+		    // This approach ensures that the original elements of the array are not lost during the rearrangement process
     	        arr[i]=(arr[maxindex]%max)*max + arr[i];
     	        maxindex--;
     	    }
@@ -83,8 +85,11 @@ and so on.
     	    arr[i]/=n;
     	}
     }
+
+
+
 Peoblem 3:-Alternate positive and negative numbers
-EasyAccuracy: 49.41%Submissions: 78410Points: 2
+
 Given an unsorted array Arr of N positive and negative numbers. Your task is to create an array of alternate positive and negative numbers without changing the relative order of positive and negative numbers.
 Note: Array should start with a positive number.
  
@@ -130,7 +135,40 @@ Output:
 
 solution 2:-  time O(n) space(1)
   
-   
+   /*
+
+    Time Complexity : O(N), As we iterate the array only ones. Where N is size of the array(nums).
+
+    Space Complexity: O(1), Constant space. Extra space is only allocated for the Array(ans) of size N, however
+    the output does not count towards the space complexity.
+
+    Solved using Array + Two Pointers.
+
+*/
+
+
+/***************************************** Approach 2 Code *****************************************/
+
+class Solution {
+public:
+    vector<int> rearrangeArray(vector<int>& nums) {
+        int n = nums.size();
+        vector<int> ans(n, 0);
+        int positiveElementIndex = 0, negativeElementIndex = 1;
+
+        for(auto num : nums){
+            if(num >= 0){
+                ans[positiveElementIndex] = num;
+                positiveElementIndex += 2;
+            }
+            else if(num < 0){
+                ans[negativeElementIndex] = num;
+                negativeElementIndex += 2;
+            }
+        }
+        return ans;
+    }
+};
     
  
 
