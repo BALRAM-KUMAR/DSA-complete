@@ -103,3 +103,5 @@ void merge(long long arr1[], long long arr2[], int n, int m) {
         gap = (gap / 2) + (gap % 2);
     }
 }
+
+O((n+m)*log(n+m)),outer loop will be O(log(n+m)) and inner loop O(M+N)
