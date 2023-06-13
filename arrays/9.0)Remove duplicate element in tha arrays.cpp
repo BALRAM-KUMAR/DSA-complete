@@ -18,7 +18,7 @@ Output: 3
 
 Intuition: We have to think of a data structure that does not store duplicate elements. So can we use a Hash set? Yes! We can. As we know HashSet only stores unique elements.
 
-Approach: 
+Approach: 1
 
 Declare a HashSet.
 Run a for loop from starting to the end.
@@ -127,4 +127,26 @@ in the given array.
                return f;
            }
     }
- 
+
+ Approach :- optimal takes O(n) and sc =O(1)
+   -> we use tortoise method where slow move one step and fast move two step
+   -> this is for finding one duplicate only
+   ex:-index:-  0 1 2 3 4 5 6 7 8 9
+       value:-  2 5 9 6 9 3 8 9 7 1
+         int Duplicate(vector<int> &nums)
+       {
+         int slow=nums[0];
+         int fast=nums[0];
+         do{
+           slow=nums[slow];
+           fast=nums[nums[fast]];
+         }while(slow!=fast)
+           
+           fast=nums[0];
+         while(slow!=fast){
+           slow=nums[slow];
+           fast=nums[fast];
+         }
+         return slow;
+         
+       }
