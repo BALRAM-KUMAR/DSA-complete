@@ -33,7 +33,25 @@ more than n/k times.
       }
        return cnt;
     }
-    
+solution 2:- without using set
+ int countOccurence(int arr[], int n, int k) {
+        // Your code here
+        int x=n/k;
+        int size=*max_element(arr,arr+n);
+        vector<int> temp(size+1,0);
+        for(int i=0;i<n;i++){
+            temp[arr[i]]++;
+        }
+        
+        int cnt=0;
+        
+        for(int i=0;i<(size+1);i++){
+            if(temp[i]>x){
+                cnt+=1;
+            }
+        }
+        return cnt;
+    }
 
 
 
