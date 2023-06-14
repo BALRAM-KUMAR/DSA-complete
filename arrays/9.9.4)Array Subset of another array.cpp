@@ -16,24 +16,17 @@ approach:-
     
 
 string isSubset(int a1[], int a2[], int n, int m) {
-    unordered_map<int, int> um, um2;
+    unordered_map<int, int> mp;
 
     for (int i = 0; i < n; i++) {
-        um[a1[i]]++;
+        mp[a1[i]]++;
     }
-    for (int i = 0; i < m; i++) {
-        um2[a2[i]]++;
-    }
-
-    int count = 0;
-    for (auto it = um2.begin(); it != um2.end(); it++) {
-        if (um[it->first] >= it->second) {
-            count+=it->second;
-        }
-    }
-
-    if (count == m)
-        return "Yes";
-    else
-        return "No";
+    
+  for(int i=0;i<m;i++)
+  {
+    if(mp.find([a2[i]==mp.end()){
+     return "No";
+     }
+  }
+   return "yes";
 }
