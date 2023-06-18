@@ -27,3 +27,10 @@ ListNode* reverseKGroup(ListNode* head, int k) {
         }
         return dummy->next;
     }
+
+
+example :-      ............!(s1)
+        pre-->  1     2     3   4   5   7    8   9    8
+            (s2)^......
+        ..............^(s3)
+               cur    nxt...^
