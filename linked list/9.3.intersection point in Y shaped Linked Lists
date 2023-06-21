@@ -6,9 +6,9 @@ Output: 15
 
                                                                        3
 /* Linked List Node                                                     6
-struct Node {                                    
-  int data;
-  struct Node *next;
+struct Node {                                                            9    10
+  int data;                                                                15 
+  struct Node *next;                                                       30
   Node(int x) {
     data = x;
     next = NULL;
