@@ -19,6 +19,7 @@ class BinaryTreeNode
     }
     
 };
+
 void printlevelwise(BinaryTreeNode<int> *root)
 {
     cout<<root->data<<" ";
@@ -40,6 +41,21 @@ void printlevelwise(BinaryTreeNode<int> *root)
 }
 
 
+vector<int> output;
+        queue<Node *>pendingnodes;
+        pendingnodes.push(node);
+        while(pendingnodes.size()!=0){
+            Node * front=pendingnodes.front();
+            output.push_back(front->data);
+            pendingnodes.pop();
+            if(front->left){
+                pendingnodes.push(front->left);
+            }
+            if(front->right){
+                pendingnodes.push(front->right);
+            }
+        }
+        return output;
 
 
 
