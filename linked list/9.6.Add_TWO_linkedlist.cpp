@@ -21,7 +21,7 @@ struct Node* addTwoLists(struct Node* first, struct Node* second)
             if(first) first=first->next;
             if(second) second = second->next;
         }
-      //if carry in last menas 789+875=987+875=762(carry 1 left and while loop end then)
+      //if carry in last menas 789+875=987+578=466(carry 1 left and while loop end then)
       if(c>0)
       {
           struct Node *temp=new Node(c);
