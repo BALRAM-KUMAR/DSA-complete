@@ -22,8 +22,7 @@ node* recreverse(node *head)
       return head;
     }
    node *newNode=recreverse(head->next);
-      node *tail=head->next;
-        tail->next=head;
+      head->next->next=head;
         head->next=NULL;
       return newHead;
 }
